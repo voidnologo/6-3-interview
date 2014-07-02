@@ -32,24 +32,19 @@ BREAK! Up Next:
 (60 seconds later)
 BREAK! Up Next:
     Person 1: burpees
-    Person 2: push ups
+    Person 2: pull ups
 (10 seconds later)
     Person 1: burpees
-    Person 2: push ups
+    Person 2: pull ups
 (60 seconds later)
 BREAK! Up Next:
-    Person 1: push ups
-    Person 2: burpees
-(10 seconds later)
-    Person 1: push ups
-    Person 2: burpees
-(60 seconds later)
-BREAK! Up Next:
-    Person 1: burpees
+    Person 1: pull ups
     Person 2: push ups
 (10 seconds later)
-    Person 1: burpees
-    Person 2: push ups
+    Person 1: pull ups
+    Person 2: push ups 
 (60 seconds later)
+*** End of set one
+*** Repeat ***
 DONE!
 """
