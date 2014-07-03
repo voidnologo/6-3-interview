@@ -8,7 +8,7 @@ print """
    Sets: 2
 """
 
-timer = Timer(exercises=['Push Ups', 'Burpees', 'Pull Ups'], break_time=3, time_limit=5)
+timer = Timer(exercises=['Push Ups', 'Burpees', 'Pull Ups', 'Up Downs'], break_time=3, time_limit=5)
 num_of_sets = 2
 
 
