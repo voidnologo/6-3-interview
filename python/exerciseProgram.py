@@ -23,8 +23,5 @@ while (timer.set_number <= num_of_sets):
    print ("\tPerson 2: " + current_exercises[1])
    timer.wait(timer.time_limit)
    if timer.end_of_set():
-      # print ("IN END OF SET: " + str(timer.set_number) + "  " + str(timer.current_cycle))
       print ("\n\n*** END OF SET : " + str(timer.set_number) + " ***\n\n")
       timer.reset()
-   # else:
-      # print ("NOT END OF SET: "  + str(timer.set_number) + "  " + str(timer.current_cycle))
