@@ -2,7 +2,7 @@ from timer import Timer
 
 
 print """
-   Exercises: "push ups", "burpees", "pull ups"
+   Exercises: "push ups", "burpees", "pull ups", "up downs"
    Time Limit: 60
    Break Time: 10
    Sets: 2
