@@ -1,35 +1,5 @@
 import unittest
-import time
-
-
-class Timer(object):
-
-    def __init__(self, exercises, break_time, time_limit):
-        self.original_exercises = exercises
-        self.exercises = exercises
-        self.break_time = break_time
-        self.time_limit = time_limit
-        self.current_cycle = -1
-        self.set_number = 1 
-
-    def get_current_exercises(self):
-        self.current_cycle += 1
-        if self.current_cycle == len(self.exercises) - 1:
-            self.exercises.append(self.exercises[0])
-
-        return self.exercises[self.current_cycle:self.current_cycle + 2]
-
-    def reset(self):
-        self.current_cycle = -1
-        self.set_number += 1
-        self.exercises = self.original_exercises
-
-    def wait(self, time_delay):
-        for i in range (time_delay, 0 , -1):
-            print('\t' + str(i), )
-            # time.sleep(1)
-        return(i) #for testing, make sure it counts down to 1
-
+from timer import Timer
 
 class TimerTests(unittest.TestCase):
 
@@ -73,14 +43,18 @@ class TimerTests(unittest.TestCase):
         self.assertEqual(original_exercises, timer.exercises)
 
 
-    def test_end_of_set_triggers_reset(self):
+    def test_end_of_set_returns_true_if_end_of_set(self):
         timer = Timer(exercises=['Push Ups', 'Burpees', 'Pull Ups'], break_time=10, time_limit=60)
-        timer.get_current_exercises()
-        timer.get_current_exercises()
-        timer.get_current_exercises()
+        timer.current_cycle = len(timer.exercises) - 1
+        self.assertTrue (timer.end_of_set())    
+
+    def test_end_of_set_returns_false_if_not_end_of_set(self):
+        timer = Timer(exercises=['Push Ups', 'Burpees', 'Pull Ups'], break_time=10, time_limit=60)
+        # timer.current_cycle = 1
+        self.assertFalse (timer.end_of_set())
 
     def test_wait_counts_down_to_one(self):
         timer = Timer(exercises=['Push Ups', 'Burpees', 'Pull Ups'], break_time=10, time_limit=60)
-        self.assertEqual(timer.wait(timer.break_time), 1)
+        self.assertEqual(timer.wait(3), 1)
 
 
